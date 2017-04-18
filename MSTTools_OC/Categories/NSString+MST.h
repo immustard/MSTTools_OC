@@ -10,6 +10,14 @@
 
 @interface NSString (MST)
 
+/**
+ 将对象转为字符串
+ 
+ @param obj 对象
+ @return 字符串
+ */
++ (NSString *)mst_stringWithObject:(id)obj;
+
 #pragma mark - Length
 /**
  计算字节长度
@@ -26,18 +34,9 @@
 /**
  检查是否含有 emoji
 
- @param string 内容
  @return 是否有 emoji
  */
-+ (BOOL)mst_stringContainsEmoji:(NSString *)string;
-
-/**
- 将对象转为字符串
- 
- @param obj 对象
- @return 字符串
- */
-+ (NSString *)mst_stringWithObject:(id)obj;
+- (BOOL)mst_containsEmoji;
 
 /**
  是否为空

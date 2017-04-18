@@ -11,6 +11,20 @@
 @interface MSTTools : NSObject
 
 /**
+ 是否有访问相册的权限
+
+ @param handle block
+ */
++ (void)authorizationForAlbum:(void (^)(BOOL authorised))handle;
+
+/**
+ 是否有访问录像的权限
+
+ @param handle block
+ */
++ (void)authorizationForCapture:(void (^)(BOOL authorised))handle;
+
+/**
  获取 App 版本号 (浮点型)
  */
 + (CGFloat)appVersion;

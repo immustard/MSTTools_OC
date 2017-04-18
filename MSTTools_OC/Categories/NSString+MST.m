@@ -10,6 +10,10 @@
 
 @implementation NSString (MST)
 
++ (NSString *)mst_stringWithObject:(id)obj {
+    return [NSString stringWithFormat:@"%@", obj];
+}
+
 - (NSInteger)mst_byteLength {
     return strlen(self.UTF8String);
 }
@@ -27,9 +31,9 @@
     return (strlength+1);
 }
 
-+ (BOOL)mst_stringContainsEmoji:(NSString *)string {
+- (BOOL)mst_containsEmoji {
     __block BOOL returnValue = NO;
-    [string enumerateSubstringsInRange:NSMakeRange(0, [string length]) options:NSStringEnumerationByComposedCharacterSequences usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+    [self enumerateSubstringsInRange:NSMakeRange(0, [self length]) options:NSStringEnumerationByComposedCharacterSequences usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
         const unichar hs = [substring characterAtIndex:0];
         // surrogate pair
         if (0xd800 <= hs && hs <= 0xdbff) {
@@ -64,10 +68,6 @@
     return returnValue;
 }
 
-+ (NSString *)mst_stringWithObject:(id)obj {
-    return [NSString stringWithFormat:@"%@", obj];
-}
-
 - (BOOL)mst_isEmpty {
     return (
             (self == nil)
@@ -87,7 +87,7 @@
             || [self isEqualToString:@"<null>"]
             || [self isEqualToString:@"(null)"]
             || [self isEqualToString:@"null"]
-            || ![[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]
+            || ![[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length]
             );
 }
 @end
