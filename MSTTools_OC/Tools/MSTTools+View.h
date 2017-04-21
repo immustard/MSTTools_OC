@@ -15,6 +15,6 @@
  
  @param color 颜色
  */
-+ (void)mst_setStatusBarBackgroundColor:(UIColor *)color;
++ (void)setStatusBarBackgroundColor:(UIColor *)color;
 
 @end

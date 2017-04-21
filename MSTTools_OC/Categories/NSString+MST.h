@@ -18,6 +18,15 @@
  */
 + (NSString *)mst_stringWithObject:(id)obj;
 
+/**
+ 将阿拉伯数字转为中文数字
+
+ @param number 阿拉伯数字
+ @return 中文数字
+ */
++ (NSString *)mst_convertNumberFromArabicToChinese:(double)number;
+
+
 #pragma mark - Length
 /**
  计算字节长度

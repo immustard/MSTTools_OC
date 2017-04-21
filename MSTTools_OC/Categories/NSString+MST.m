@@ -14,6 +14,16 @@
     return [NSString stringWithFormat:@"%@", obj];
 }
 
++ (NSString *)mst_convertNumberFromArabicToChinese:(double)number {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    
+    formatter.numberStyle = kCFNumberFormatterRoundHalfDown;
+    
+    NSString *string = [formatter stringFromNumber:@(number)];
+    
+    return string;
+}
+
 - (NSInteger)mst_byteLength {
     return strlen(self.UTF8String);
 }

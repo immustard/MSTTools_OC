@@ -10,15 +10,18 @@
 #define MSTMacro_h
 
 #pragma mark - Screen
-#define mst_ScreenWidth   [UIScreen mainScreen].bounds.size.width
-#define mst_ScreenHeight  [UIScreen mainScreen].bounds.size.height
+#define mst_ScreenWidth     [UIScreen mainScreen].bounds.size.width
+#define mst_ScreenHeight    [UIScreen mainScreen].bounds.size.height
+#define mst_NavHeight       64
+#define mst_TabarHegiht     49
+#define mst_SearchBarHeight 44
 
 #pragma mark - Color
-#define mst_RGBCOLOR(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
-#define mst_RGBACOLOR(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
-#define mst_RandomColor [UIColor colorWithRed:arc4random()%256/255.0 green:arc4random()%256/255.0 blue:arc4random()%256/255.0 alpha:1.0]
-#define mst_HSVCOLOR(h,s,v) [UIColor colorWithHue:h saturation:s value:v alpha:1]
-#define mst_HSVACOLOR(h,s,v,a) [UIColor colorWithHue:h saturation:s value:v alpha:a]
+#define mst_RGBCOLOR(r,g,b)     [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define mst_RGBACOLOR(r,g,b,a)  [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define mst_RandomColor         [UIColor colorWithRed:arc4random()%256/255.0 green:arc4random()%256/255.0 blue:arc4random()%256/255.0 alpha:1.0]
+#define mst_HSVCOLOR(h,s,v)     [UIColor colorWithHue:h saturation:s value:v alpha:1]
+#define mst_HSVACOLOR(h,s,v,a)  [UIColor colorWithHue:h saturation:s value:v alpha:a]
 
 #pragma mark - Font
 #define mst_TextSize10 [UIFont systemFontOfSize:10]
@@ -48,10 +51,10 @@
 #define mst_TextBoldSize(i) [UIFont boldSystemFontOfSize:i]
 
 #pragma mark - Time
-#define mst_OneMinute 60
-#define mst_OneHour 3600
-#define mst_OneDay 86400
-#define mst_OneWeek 604800
+#define mst_OneMinute   60
+#define mst_OneHour     3600
+#define mst_OneDay      86400
+#define mst_OneWeek     604800
 
 #pragma mark - Is Empty
 // 判断字符串是否为空
