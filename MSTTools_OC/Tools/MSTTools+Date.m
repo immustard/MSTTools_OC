@@ -46,11 +46,11 @@
     NSInteger intervalTime = nowTime - publishTime;
     if (intervalTime < 60) {
         return @"刚刚";
-    } else if (intervalTime >= 60 && intervalTime < mst_OneHour) {
+    } else if (intervalTime >= 60 && intervalTime < kOneHour) {
         return [NSString stringWithFormat:@"%@分钟前", @(intervalTime/60)];
-    } else if (intervalTime >= mst_OneHour && intervalTime < mst_OneDay) {
-        return [NSString stringWithFormat:@"%@小时前", @(intervalTime/mst_OneHour)];
-    } else if (intervalTime >= mst_OneDay && intervalTime < mst_OneDay*2) {
+    } else if (intervalTime >= kOneHour && intervalTime < kOneDay) {
+        return [NSString stringWithFormat:@"%@小时前", @(intervalTime/kOneHour)];
+    } else if (intervalTime >= kOneDay && intervalTime < kOneDay*2) {
         return @"昨天";
     } else {
         NSDate *date = [NSDate dateWithTimeIntervalSince1970:publishTime];
