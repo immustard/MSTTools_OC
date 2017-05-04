@@ -29,12 +29,4 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.subspec 'Categories' do |ss|
-    ss.source_files = 'MSTTools_OC/Categories/*.{h,m}'
-  end
-
-  s.subspec 'Tools' do |ss|
-    ss.source_files = 'MSTTools_OC/Tools/*.{h,m}'
-  end
-
 end
