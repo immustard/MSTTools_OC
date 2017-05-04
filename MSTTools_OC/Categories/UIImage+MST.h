@@ -121,7 +121,7 @@ CGFloat RadiansToDegrees(CGFloat radians);
  
  @return 修正后图片
  */
-- (UIImage *)mst_fixOrientation:(UIImage *)aImage;
+- (UIImage *)mst_fixOrientation;
 
 
 @end
